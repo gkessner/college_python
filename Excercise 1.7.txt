@@ -1,0 +1,31 @@
+# Write your code below:
+import statistics
+
+
+
+def main():
+    """Tests the functions."""
+    lyst = []
+    x = (int(input('Enter how many spaces the list is: ')))
+    for i in range(x):
+      lyst.append(int(input('Enter a Value for the list: ')))
+    print("List:", lyst)
+    mode(lyst)
+    median(lyst)
+    mean(lyst)
+
+def mode(lyst):
+    try:
+        print("Mode:", statistics.mode(lyst))
+    except:
+        print("Mode:", lyst[0])
+
+def median(lyst):
+    print("Median:", statistics.median(lyst))
+
+def mean(lyst):
+    print("Mean:", statistics.mean(lyst))
+
+
+if __name__ == "__main__":
+    main()

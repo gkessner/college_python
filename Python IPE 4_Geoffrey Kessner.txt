@@ -1,0 +1,22 @@
+from collections import deque
+
+n1 = int(input('Please give value 1: '))
+n2 = int(input('Please give value 2: '))
+n3 = int(input('Please give value 3: '))
+n4 = int(input('Please give value 4: '))
+n5 = int(input('Please give value 5: '))
+unsortedStack = collections.deque([n1,n2,n3,n4,n5])
+
+print("Unsorted stack: ", unsortedStack)
+
+storedLength = len(stack)
+sortedStack = []
+i = 4
+
+while ((len(unsortedStack) <= storedLength) and storedLength != -1):
+    tempValue = unsortedStack.pop()
+    if (unsortedStack(i-1) > tempValue):
+        sortedStack.append(unsortedStack(i-1)
+    i -= 1
+
+print("Sorted stack: ", sortedStack)

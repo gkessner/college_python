@@ -1,0 +1,33 @@
+'''
+Exercise 3
+Geoffrey Kessner
+2/10/2022
+
+'''
+
+s1 = str(input('Please type string #1: '))
+s2 = str(input('Please type string #2: '))
+
+storeStringSwap = str()
+if len(s1) > len(s2):
+    storeStringSwap = s1
+    s1 = s2
+    s2 = storeStringSwap
+
+l1 = list(s1)
+l2 = list(s2)
+
+l3 = list()
+storeChar = str()
+storedValue = 0
+
+for i in range(len(l1)):
+    l3.append(l1[i])
+    l3.append(l2[i])
+    storedValue = i    
+
+print(storedValue)
+l3.append(l2[(len(l2)) - i + 1])
+
+s3 = "".join(l3)
+print("The combined strings make: ",s3)

@@ -1,0 +1,38 @@
+'''
+
+Exercise 8
+4/7/2022
+Geoffrey Kessner
+
+'''
+
+#Program only accepts uppercase
+
+inputString = str(input("Please input a string: "))
+inputNum = int(input("Please give the value in the string to start mirroring at: "))
+
+
+strAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+backwardsAlphabet = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
+
+#treat string as list
+#search alphabet for item at position in string
+#compute difference between list position in alphabet and backwardAlphabet to get new value
+#append value to new list
+
+newString = []
+
+if inputNum != 0:
+    for i in range(0, (inputNum)):
+        posAlphabet = (strAlphabet.find(inputString[i]))
+        newString.append(strAlphabet[posAlphabet])
+        posAlphabet = 0
+
+i = 0
+
+for i in range(inputNum, len(inputString)):
+    posAlphabet = (strAlphabet.find(inputString[i]))
+    newString.append(backwardsAlphabet[posAlphabet])
+    posAlphabet = 0
+    
+print(''.join(newString))

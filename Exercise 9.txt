@@ -1,0 +1,42 @@
+'''
+
+Exercise 9
+4/14/2022
+Geoffrey Kessner
+
+'''
+sentinel = 0
+
+while sentinel == 0:
+    #prompt user for the number of digits
+    numDigits = int(input("How many digits long will the tested value be?: "))
+    
+    #prompt user for those digits into a list with a for loop
+    digitList = []
+    
+    for i in range(0, numDigits):
+        ele = int(input("Give a digit: "))
+        digitList.append(ele)
+        
+    
+    #store the integer version of that list's digits together
+    strVerList = [str(j) for j in digitList]
+    singleString = ''.join(strVerList)
+    intVerList = int(singleString)
+    #print(intVerList)
+    
+    #use a for loop to tally the digits by moving through the list and keeping a running total
+    runningTotal = 0
+    
+    for k in range(0, numDigits):
+        runningTotal = ((digitList[k] ** numDigits) + runningTotal)
+    
+    
+    #compare that total to the integer version of the list digits and print
+    if runningTotal == intVerList:
+        print(runningTotal, "is an Armstrong number.")
+    else:
+        print(runningTotal, "is not an Armstrong number.")
+    
+    #ask user if they want to continue or not
+    sentinel = int(input("Would you like to go again? Type 0 for Yes, 1 for No: "))

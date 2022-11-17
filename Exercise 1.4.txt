@@ -1,0 +1,36 @@
+# Write your code below:
+import math
+
+iterations = int(input("Enter the number of iterations: "))
+
+pi = float(math.pi)
+a = int(1)
+posNeg = int(1)
+runningTotal = int(0)
+dividedValue = int(1)
+
+while (a <= iterations):
+    if (a % 2) == 0:
+        posNeg = int(-1)
+        print("negative")
+    else:
+        posNeg = int(1)
+        print("positive")
+    
+    if dividedValue == 1:
+        liebniz = 1
+        print("dividend: ", dividedValue)
+        dividedValue = dividedValue + 2
+    else:
+        liebniz = (1/(dividedValue)) * posNeg
+        dividedValue = dividedValue + 2
+        print("dividend: ", dividedValue)
+    runningTotal = runningTotal + liebniz
+    print("Running total is:", runningTotal)
+    a += 1
+    print("an iteration occured")
+
+runningTotal = runningTotal * 4
+
+print("The approximation of pi is ", runningTotal)
+print("Compare this to the computer's estimation: ", pi)
