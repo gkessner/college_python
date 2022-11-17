@@ -1,0 +1,22 @@
+'''
+
+IPE 2
+2/27/2022
+
+'''
+import numpy
+
+list = []
+
+n = int(input("How many numbers in array?: "))
+
+for i in range (0,n):
+    element = int(input())
+    list.append(element)
+
+print(list)
+
+n2 = int(input("Number to divide the array by?: "))
+
+outputArray = numpy.divide(list, n2)
+print("Divided array: ", outputArray)

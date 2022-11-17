@@ -1,0 +1,21 @@
+'''
+
+IPE 5
+Geoffrey Kessner
+
+'''
+sentinel = 1
+
+while sentinel != 0:
+    givenInt = int(input("Please give an integer: "))
+    if givenInt > 1:
+    
+        for i in range(2, int(givenInt/2)+1):
+            if (givenInt % i) == 0:
+                print(givenInt, "is not a prime number")
+                #break
+        else:
+            print(givenInt, "is a prime number")
+    else:
+        print(givenInt, "is not a prime number")
+    sentinel = int(input("Would you like to test another number? 0 for No, 1 for Yes: "))    

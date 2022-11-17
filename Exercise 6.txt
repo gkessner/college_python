@@ -1,0 +1,19 @@
+'''
+Exercise 6
+Geoffrey Kessner
+
+'''
+
+listOfStrings = ["apple", "orange", "banana", "pineapple", "coconut"]
+print(listOfStrings)
+
+selectedChar = input(str("Please choose a lowercase character to create the new list: "))
+
+newlist = []
+
+for i in range(0, (len(listOfStrings))):
+    if listOfStrings[i].find(selectedChar) != -1:
+        newlist.append(listOfStrings[i])
+
+print(newlist)
+

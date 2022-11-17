@@ -1,0 +1,28 @@
+'''
+
+IPE 4 - COP3530
+Geoffrey Kessner
+
+'''
+
+listLength = int(input("Please give the length of the list: "))
+
+lyst = []
+
+for i in range(0, listLength):
+    element = int(input("Give a value: "))
+ 
+    lyst.append(element)
+
+print(lyst)
+
+#section that sorts the list in descending order
+lyst.sort(reverse=True)
+
+
+#creates a new list and copies in only the first three values
+newList = []
+for j in range (0, 3):
+    newList.append(lyst[j])
+    
+print(newList)
